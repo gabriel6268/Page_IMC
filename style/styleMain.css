@@ -1,0 +1,174 @@
+/*redefining css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*settings root*/
+:root {
+    font-size: 62.5%;
+
+    /*colors*/
+    --tc-heading: #0c3440;
+    --tc-label: #00453a;
+    --tc-input: #212529;
+    --oc-input: #02799d;
+    --bc-input: rgba(73, 80, 87, 0.3);
+    --bg-input: #dce2e9;
+    --pc-input: rgba(73, 80, 87, 0.5);
+    --tc-button: #fff;
+    --bc-button: #02799d;
+    --bc-error: #f03e3e;
+    --bg-button-hover: #03617e;
+}
+
+/*settings container main*/
+
+/*settings body*/
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #040924;
+    font-size: 1.6rem;
+}
+
+/*settings container*/
+.container {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+/*settings card*/
+.card {
+    padding: 4.8rem 6.4rem 6.4rem;
+    background-color: #fff;
+    max-width: 42.8rem;
+    margin-inline: auto;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.6rem;
+}
+
+/*settings form*/
+
+/*title and inputs*/
+
+form {
+    width: 30rem;
+}
+.title {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    color: var(--tc-heading);
+}
+
+form h1 {
+    margin-bottom: 3.2rem;
+}
+form label {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--tc-label);
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+form input {
+    width: 100%;
+    border: 1px solid var(--bc-input);
+    background-color: var(--bg-input);
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+}
+form input:focus {
+    outline: 2px solid var(--oc-input);
+}
+
+form input::placeholder {
+    color: var(--pc-input);
+}
+
+.inputWrapper + .inputWrapper {
+    margin-top: 1.6rem;
+}
+
+/*button*/
+
+form button {
+    cursor: pointer;
+    margin-top: 3.2rem;
+    padding: 1.6rem;
+    width: 100%;
+    border: none;
+    background-color: var(--bc-button);
+    color: var(--tc-button);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background: var(--bg-button-hover);
+}
+
+/*settings container modal*/
+.modalWrapper {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modalWrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
+
+/*settings alert Error*/
+.alertError {
+    position: absolute;
+    background-color: var(--bc-error);
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--tc-button);
+    padding: 0.8rem 0;
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: transform 0.5s;
+}
+
+.alertError.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
