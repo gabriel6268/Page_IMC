@@ -1,6 +1,7 @@
 # Page IMC do curso explorer da RocketSeat
         Desktop Screens
-![preview](../github/gridScreens.png)
+![preview](github/gridScreens.png)
+:link:[Visualizar página](https://gabriel6268.github.io/Page_IMC/)
 >Trabalhando coiceitos de modularização e eventos dom
 
 ## :wrench: Ferramentas
